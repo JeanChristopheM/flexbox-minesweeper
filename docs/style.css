@@ -27,6 +27,7 @@ section {
     background-color: lightgrey;
     box-shadow: inset 2px 2px 0px white, inset -2px -2px 0px darkslategrey;
     display:grid;
+    position: relative;
     align-content: center;
     justify-content: center;
     font-size:2rem;
@@ -53,3 +54,16 @@ section:active {
     .three {
         color:red;
     }
+    .hidden {
+        opacity:0;
+        transition: all .1s;
+    }
+        section:hover .hidden {
+            opacity: 1;
+        }
+        section span img {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+        }
